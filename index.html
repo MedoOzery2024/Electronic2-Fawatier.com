@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الأطيبان A. M. B لتمور الوادي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" class="page">
+        <div class="logo">
+            <img src="img1.png" alt="Logo">
+        </div>
+        <h1>شركة الأطيبان A. M. B لتمور الوادي</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+    </div>
+
+    <div id="main-page" class="page" style="display: none;">
+        <div class="logo">
+            <img src="img1.png" alt="Logo">
+        </div>
+        <h1>شركة الأطيبان A. M. B لتمور الوادي</h1>
+        <div id="clock"></div>
+        <div id="date"></div>
+        <button id="register-invoice-btn">سجل فاتورة الشراء</button>
+    </div>
+
+    <div id="invoice-page" class="page" style="display: none;">
+        <div class="logo">
+            <img src="img1.png" alt="Logo">
+        </div>
+        <h1>تسجيل فاتورة الشراء</h1>
+        <form id="invoice-form">
+            <label for="item-name">اسم الصنف:</label>
+            <input type="text" id="item-name" name="item-name" required>
+            <label for="item-type">نوع الصنف:</label>
+            <select id="item-type" name="item-type" required>
+                <option value="علبة تمر">علبة تمر</option>
+                <option value="علبة عجوة">علبة عجوة</option>
+                <option value="كيس بسكوت بالتمر">كيس بسكوت بالتمر</option>
+                <option value="تمر سايب">تمر سايب</option>
+                <option value="عجوة ناعمة">عجوة ناعمة</option>
+                <option value="علبة عصير تمر">علبة عصير تمر</option>
+            </select>
+            <label for="item-quantity">كمية الصنف:</label>
+            <select id="item-quantity" name="item-quantity" required>
+                <option value="طن">طن</option>
+                <option value="كيلو">كيلو</option>
+                <option value="جرام">جرام</option>
+            </select>
+            <label for="item-count">عدد الأصناف المباعة:</label>
+            <input type="number" id="item-count" name="item-count" required>
+            <label for="item-price">سعر الصنف الواحد بالجنيه المصري:</label>
+            <input type="number" id="item-price" name="item-price" required>
+            <button type="button" id="add-item-btn">إضافة البيانات</button>
+        </form>
+        <table id="invoice-table">
+            <thead>
+                <tr>
+                    <th>اسم الصنف</th>
+                    <th>نوع الصنف</th>
+                    <th>كمية الصنف</th>
+                    <th>عدد الأصناف المباعة</th>
+                    <th>سعر الصنف الواحد</th>
+                    <th>إجمالي السعر</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Invoice items will be added here -->
+            </tbody>
+        </table>
+        <div id="total-price">إجمالي الفاتورة: 0 جنيه مصري</div>
+        <button id="calculate-total-btn">حساب إجمالي الفاتورة</button>
+        <button id="save-data-btn">حفظ البيانات</button>
+        <button id="delete-data-btn">حذف البيانات نهائيا</button>
+        <button id="restore-data-btn">استعادة البيانات</button>
+        <button id="print-btn">طباعة</button>
+        <button id="back-to-main-btn">العودة إلى الصفحة الرئيسية</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
